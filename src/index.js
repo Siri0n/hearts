@@ -20,9 +20,12 @@ function preload(){
 }
 
 function create(){
-    const controller = new Controller(this, 256);
-    this.add.heart({x: 1, y: 1, angle: 1, controller});
-    this.add.heart({x: 2, y: 2, angle: 2, controller});
+    const controller = new Controller(this, 128);
+    for(let i = 0; i < 4; i++){
+        for(let j = 0; j < 4; j++){
+            this.add.heart({x: i, y: j, angle: 0, controller});
+        }
+    }
 }
 
 function init(){
